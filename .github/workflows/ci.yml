@@ -1,0 +1,41 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  validate:
+    name: Validar HTML y CSS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Instalar HTMLHint
+        run: npm install -g htmlhint
+      
+      - name: Validar HTML
+        run: htmlhint "**/*.html"
+
+      - name: Instalar Stylelint
+        run: |
+          npm install stylelint stylelint-config-standard --save-dev
+          echo '{ "extends": "stylelint-config-standard" }' > .stylelintrc.json
+      
+      - name: Validar CSS
+        run: npx stylelint "**/*.css"
+
+  deploy:
+    name: Desplegar a GitHub Pages
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Desplegar con GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./

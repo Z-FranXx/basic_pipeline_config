@@ -6,7 +6,7 @@
   --blanco: #fff;
   --no-tan-blanco: #e4e3e3;
   --negro: #000;
-  --fuente-principal: "Staatliches", cursive;
+  --fuente-principal: "Staatliches", cursive; /* Cambiado a kebab-case */
 }
 
 html {
@@ -51,7 +51,7 @@ h2,
 h3 {
   text-align: center;
   color: var(--secundario);
-  font-family: var(--fuente-principal);
+  font-family: var(--fuente-principal); /* Cambiado a kebab-case */
 }
 
 h1 {
@@ -98,7 +98,7 @@ h3 {
 }
 
 .navegacion-enlace {
-  font-family: var(--fuentePrincipal);
+  font-family: var(--fuente-principal); /* Cambiado a kebab-case */
   color: var(--blanco);
   font-size: 2.5rem;
 }

@@ -2,9 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ master, main ]
+    branches: [master, main]
   pull_request:
-    branches: [ master, main ]
+    branches: [master, main]
 
 jobs:
   validate:
@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Instalar HTMLHint
         run: npm install -g htmlhint
-      
+
       - name: Validar HTML
         run: htmlhint "**/*.html"
 
@@ -23,7 +23,7 @@ jobs:
         run: |
           npm install stylelint stylelint-config-standard --save-dev
           echo '{ "extends": "stylelint-config-standard" }' > .stylelintrc.json
-      
+
       - name: Validar CSS
         run: npx stylelint "**/*.css"
 
@@ -34,8 +34,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Desplegar con GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
+          publish_branch: gh-pages

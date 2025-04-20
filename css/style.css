@@ -1,12 +1,12 @@
 :root {
   --primario: #9c27b0;
-  --primario-oscuro: #89119d;
+  --primarioOscuro: #89119d;
   --secundario: #ffce00;
-  --secundario-oscuro: rgb(233, 187, 2);
+  --secundarioOscuro: rgb(233 187 2); /* notación moderna */
   --blanco: #fff;
-  --no-tan-blanco: #E4E3E3;
+  --noTanBlanco: #e4e3e3;
   --negro: #000;
-  --fuente-principal: "Staatliches", cursive;
+  --fuentePrincipal: "Staatliches", cursive;
 }
 
 html {
@@ -98,7 +98,7 @@ h3 {
 }
 
 .navegacion-enlace {
-  font-family: var(--fuente-principal);
+  font-family: var(--fuentePrincipal);
   color: var(--blanco);
   font-size: 2.5rem;
 }
@@ -115,7 +115,7 @@ h3 {
   gap: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -165,7 +165,7 @@ h3 {
   grid-row: 8 / 9;
 }
 
-@media (min-width: 769px) {
+@media (width >= 769px) {
   .grafico-node {
     grid-row: 5 / 6;
     grid-column: 2 / 4;
@@ -178,7 +178,7 @@ h3 {
   grid-template-rows: repeat(2, auto);
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .nosotros {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
@@ -190,8 +190,8 @@ h3 {
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  .nosotros-img {
+@media (width >= 768px) {
+  .nosotros_img {
     grid-column: 2 / 3;
   }
 }
@@ -203,7 +203,7 @@ h3 {
   gap: 2rem;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .bloques {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -222,7 +222,7 @@ h3 {
 }
 
 /* Página del producto */
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .camisa {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

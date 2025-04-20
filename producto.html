@@ -30,28 +30,35 @@
 
     <main class="contenedor">
       <h1>React JS</h1>
-
+    
       <div class="camisa">
-        <img src="img/3.jpg" alt="imagen del producto" class="camisa_img" />
-
+        <img src="img/3.jpg" alt="imagen del producto" class="camisa_img" title="Camisa React JS" />
+    
         <div class="camisa_contenido">
           <p>
             Ipsum est mollit sunt non do commodo dolore ut elit occaecat sint
             qui velit. Laboris velit ullamco eu occaecat nulla deserunt laboris
             commodo velit esse. 
-
-            <form class="formulario">
-              <select class= "formulario_campo">
-                <option disabled selected>-- Seleccionar Talla --</option>
-                <option>Small</option>
-                <option>Mediun</option>
-                <option>Large</option>
-              </select>
-              <input class="formulario_campo" type="number" placeholder="Cantidad" min="1" max="10">
-              <input class="formulario_submit" type="submit" value="Agregar al carrito">
-            </form>
+          </p>
+    
+          <form class="formulario">
+            <label for="talla">Seleccionar Talla:</label>
+            <select id="talla" class="formulario_campo">
+              <option disabled selected>-- Seleccionar Talla --</option>
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+            </select>
+    
+            <label for="cantidad">Cantidad:</label>
+            <input id="cantidad" class="formulario_campo" type="number" placeholder="Cantidad" min="1" max="10">
+    
+            <input class="formulario_submit" type="submit" value="Agregar al carrito">
+          </form>
+        </div>
       </div>
     </main>
+    
 
     <footer class="footer">
       <p class="footer_texto">

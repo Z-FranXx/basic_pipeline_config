@@ -1,12 +1,12 @@
 :root {
   --primario: #9c27b0;
-  --primarioOscuro: #89119d;
+  --primario-oscuro: #89119d;
   --secundario: #ffce00;
-  --secundarioOscuro: rgb(233 187 2); /* notación moderna */
+  --secundario-oscuro: rgb(233 187 2); /* notación moderna */
   --blanco: #fff;
-  --noTanBlanco: #e4e3e3;
+  --no-tan-blanco: #e4e3e3;
   --negro: #000;
-  --fuentePrincipal: "Staatliches", cursive;
+  --fuente-principal: "Staatliches", cursive;
 }
 
 html {
@@ -103,7 +103,7 @@ h3 {
   font-size: 2.5rem;
 }
 
-.navegacion-enlace--activo,
+.navegacion-enlace-activo,
 .navegacion-enlace:hover {
   color: var(--secundario);
 }
@@ -191,7 +191,7 @@ h3 {
 }
 
 @media (width >= 768px) {
-  .nosotros_img {
+  .nosotros-img {
     grid-column: 2 / 3;
   }
 }
